@@ -1,6 +1,9 @@
+import Navigation from './Pages/Navigation';
+
 const Header = () => (
   <header>
-    <h1>My App</h1>
+    <h1>Bookstore CMS</h1>
+    <Navigation />
   </header>
 );
 
