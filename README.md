@@ -49,7 +49,6 @@ After you're finished please remove all the comments and instructions!
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
-
 # 📖 [Bookstore] <a name="about-project"></a>
 
 **[Bookstore]** is a simple web app that displays a list of books and allows you to add and remove books from that list.
@@ -158,6 +157,12 @@ To run tests, run the following command:
 - LinkedIn: [Marc raphael](http://www.linkedin.com/in/marc-raphael-326039204)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **[Using Redux Store]**
+- [ ] **[Fetching Data from an external API]**
+- [ ] **[Removing the selected book]**
 
 <!-- CONTRIBUTING -->
 
