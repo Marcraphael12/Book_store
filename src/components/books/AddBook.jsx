@@ -1,4 +1,4 @@
-const AddBookForm = () => {
+const AddBookForm = () => (
   <form>
     <input type="text" placeholder="Title" />
     <input type="text" placeholder="Author" />
@@ -12,7 +12,7 @@ const AddBookForm = () => {
     </label>
 
     <button type="submit">Add Book</button>
-  </form>;
-};
+  </form>
+);
 
 export default AddBookForm;
