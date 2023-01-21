@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Books = () => {
-  const [books] = [
+  const books = [
     {
       title: 'The Hunger Games',
       Author: 'Suzanne Collins',
