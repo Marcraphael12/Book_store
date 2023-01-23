@@ -1,16 +1,29 @@
-const Add_Book = '';
-const Remove_Book = '';
+const ADDBOOK = '';
+const REMOVEBOOK = '';
 
 // our initial state
 const initialState = [];
 
-// our reducers
-const AddBook = (payload) => ({
-  type: Add_Book,
+export const AddBook = (payload) => ({
+  type: ADDBOOK,
   payload,
 });
 
-const RemoveBook = (payload) => ({
-  type: Remove_Book,
+export const RemoveBook = (payload) => ({
+  type: REMOVEBOOK,
   payload,
 });
+
+// our reducer
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ADDBOOK:
+      return [...state, action.payload];
+    case REMOVEBOOK:
+      return state.filter((book) => book.id !== action.payload);
+    default:
+      return state;
+  }
+};
+
+export default reducer;
