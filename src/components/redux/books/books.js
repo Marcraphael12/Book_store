@@ -1,9 +1,11 @@
+// action types
 const ADDBOOK = '';
 const REMOVEBOOK = '';
 
 // our initial state
 const initialState = [];
 
+// Action creators
 export const AddBook = (payload) => ({
   type: ADDBOOK,
   payload,
