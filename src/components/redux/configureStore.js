@@ -2,10 +2,12 @@ import { configureStore, applyMiddleware, combineReducers } from '@reduxjs/toolk
 import logger from 'redux-logger';
 
 import booksReducer from './books/books';
+import categoriesReducer from './categories/categories';
 
 // Combine all reducers into a single reducer
 const reducer = combineReducers({
-  reducer: booksReducer,
+  booksReducer,
+  categoriesReducer,
 });
 
 // Create a Redux store holding the state of your app.
