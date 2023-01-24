@@ -1,8 +1,7 @@
-import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/header/Header';
-import Books from './components/books/Books';
-import Categories from './components/categories/Categories';
+import Header from './pages/Header';
+import Books from './pages/Books/books';
+import Categories from './pages/categories/categories';
 
 const App = () => (
   <div className="App">
