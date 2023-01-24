@@ -7,9 +7,16 @@ const Books = () => {
   return (
     <div>
       <ul className="books">
+        {/*
         {books.map((book) => (
           <SingleBook key={book.id} book={books} />
         ))}
+        */}
+        {!books.length
+          ? 'No books added yet'
+          : books.map((book) => (
+            <SingleBook key={book.id} book={book} />
+          ))}
       </ul>
       <AddBook />
 

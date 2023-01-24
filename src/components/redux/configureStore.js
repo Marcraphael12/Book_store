@@ -4,13 +4,13 @@ import logger from 'redux-logger';
 import booksReducer from './books/books';
 
 // Combine all reducers into a single reducer
-const rootReducer = combineReducers({
-  books: booksReducer,
+const reducer = combineReducers({
+  reducer: booksReducer,
 });
 
 // Create a Redux store holding the state of your app.
 const store = configureStore(
-  rootReducer, applyMiddleware(logger),
+  { reducer }, applyMiddleware(logger),
 );
 
 export default store;
