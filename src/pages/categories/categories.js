@@ -7,6 +7,12 @@ const Categories = () => {
 
   // consume status state
   const status = useSelector((state) => state.categoriesReducer);
+
+  // dispatch action
+  const CheckStatus = () => {
+    dispatch(checkStatus());
+  };
+
   return (
     <div>
       <button type="button">
