@@ -3,20 +3,17 @@ import SingleBook from '../../components/simple_book/Single_Book';
 import AddBook from '../../components/add_a_book/Add_a_Book';
 
 const Books = () => {
-  const books = useSelector((state) => state.books);
+  const books = useSelector((state) => state.book);
   return (
     <div>
       <ul className="books">
-        {/*
         {books.map((book) => (
-          <SingleBook key={book.id} book={books} />
+          <SingleBook
+            key={book.id}
+            title={book.title}
+            author={book.author}
+          />
         ))}
-        */}
-        {!books.length
-          ? 'No books added yet'
-          : books.map((book) => (
-            <SingleBook key={book.id} book={book} />
-          ))}
       </ul>
       <AddBook />
 
