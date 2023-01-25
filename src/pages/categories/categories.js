@@ -1,7 +1,10 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { checkStatus } from '../../redux/categories/categories';
 
-function categories() {
+
+const categories = () => {
+  const dispatch = useDispatch();
   return (
     <div>
       <button type="button">
