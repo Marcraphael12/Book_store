@@ -7,7 +7,6 @@ const Categories = () => {
 
   // consume status state
   const status = useSelector((state) => state.categoriesReducer);
-  console.log(status);
 
   // dispatch action
   const CheckStatus = () => {
@@ -16,6 +15,7 @@ const Categories = () => {
 
   return (
     <div>
+      <h3>{status}</h3>
       <button type="button" onClick={CheckStatus}>
         Check Status
       </button>
