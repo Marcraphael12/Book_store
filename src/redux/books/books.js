@@ -6,14 +6,14 @@ const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const initialState = [];
 
 // action creators
-export const addBook = (book) => ({
+export const addBook = (payload) => ({
   type: ADD_BOOK,
-  payload: book,
+  payload,
 });
 
-export const removeBook = (book) => ({
+export const removeBook = (payload) => ({
   type: REMOVE_BOOK,
-  payload: book,
+  payload,
 });
 
 // reducer
