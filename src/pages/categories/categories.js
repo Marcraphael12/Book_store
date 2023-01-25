@@ -2,9 +2,11 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { checkStatus } from '../../redux/categories/categories';
 
-
-const categories = () => {
+const Categories = () => {
   const dispatch = useDispatch();
+
+  // consume status state
+  const status = useSelector((state) => state.categoriesReducer);
   return (
     <div>
       <button type="button">
@@ -14,4 +16,4 @@ const categories = () => {
   );
 }
 
-export default categories;
+export default Categories;
