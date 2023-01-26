@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../../redux/books/books';
+import { RemoveABook } from '../../redux/books/thunk';
 
 const SingleBook = (book) => {
-  const { title, author, id } = book;
+  const { title, author, item_id } = book;
   const dispatch = useDispatch();
   const RemoveBook = () => {
-    dispatch(removeBook(id));
+    dispatch(RemoveABook(item_id));
   };
   return (
     <li className="book">
