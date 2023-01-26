@@ -1,5 +1,5 @@
 // action types
-const GET_BOOK = 'bookStore/books/GET_BOOK'
+const GET_BOOK = 'bookStore/books/GET_BOOK';
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
@@ -7,6 +7,11 @@ const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const initialState = [];
 
 // action creators
+export const getBook = (payload) => ({
+  type: GET_BOOK,
+  payload,
+});
+
 export const addBook = (payload) => ({
   type: ADD_BOOK,
   payload,
