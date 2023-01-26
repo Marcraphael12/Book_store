@@ -15,3 +15,29 @@ const AddABook = (book) => async (dispatch) => {
   console.log(result);
   dispatch(addBook(book));
 };
+
+const GetABook = () => async (dispatch) => {
+  const result = await fetch(URL);
+  const data = await result.json();
+
+  const books = Object.entries(data).map(([id, bookData]) => {
+    const { title, category } = bookData[0];
+    return {
+      item_id: id,
+      title,
+      category,
+    };
+  });
+
+  dispatch(getBook(books));
+};
+
+const RemoveABook = (id) => async (dispatch) => {
+  const result = await fetch(`${URL}/${id}`, {
+    method: 'DELETE',
+  });
+  console.log(result);
+  dispatch(removeBook(id));
+};
+
+export { AddABook, GetABook, RemoveABook };
