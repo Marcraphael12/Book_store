@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import { addBook } from '../../redux/books/books';
+import { AddABook } from '../../redux/books/thunk';
 
 const AddBook = () => {
   const [newInput, setInput] = useState({ id: '', title: '', author: '' });
@@ -17,7 +17,7 @@ const AddBook = () => {
   const Submit = (e) => {
     e.preventDefault();
     // dispatch action
-    dispatch(addBook(newInput));
+    dispatch(AddABook(newInput));
     // reset input
     setInput({ id: '', title: '', author: '' });
   };
