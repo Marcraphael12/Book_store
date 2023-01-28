@@ -1,3 +1,4 @@
+/* eslint-disable missing-file-extension */
 import { Routes, Route } from 'react-router-dom';
 import Books from './pages/books/Books';
 import Categories from './pages/categories/Categories';
