@@ -1,10 +1,26 @@
-import { getBook, addBook, removeBook } from './books';
+/* eslint-disable no-unused-vars */
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { getBooksAction, addBookAction, removeBookAction } from './books';
 
-const ID = 'Nf6SeYddxW75X78pxU1n';
-const URL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${ID}/books`;
+const API = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/Nf6SeYddxW75X78pxU1n/books/';
 
-const AddABook = (book) => async (dispatch) => {
-  const result = await fetch(URL, {
+export const getBooks = () => async (dispatch) => {
+  const res = await fetch(API);
+  const data = await res.json();
+
+  const books = Object.entries(data).map(([id, bookData]) => {
+    const { category, title } = bookData[0];
+    return {
+      item_id: id,
+      category,
+      title,
+    };
+  });
+  dispatch(getBooksAction(books));
+};
+
+export const addBook = (book) => async (dispatch) => {
+  const res = await fetch(API, {
     method: 'POST',
     headers: {
       Accept: 'application/json',
@@ -12,32 +28,13 @@ const AddABook = (book) => async (dispatch) => {
     },
     body: JSON.stringify(book),
   });
-  console.log(result);
-  dispatch(addBook(book));
+  dispatch(addBookAction(book));
 };
 
-const GetABook = () => async (dispatch) => {
-  const result = await fetch(URL);
-  const data = await result.json();
-
-  const books = Object.entries(data).map(([id, bookData]) => {
-    const { title, category } = bookData[0];
-    return {
-      item_id: id,
-      title,
-      category,
-    };
-  });
-
-  dispatch(getBook(books));
-};
-
-const RemoveABook = (id) => async (dispatch) => {
-  const result = await fetch(`${URL}/${id}`, {
+export const removeBook = (id) => async (dispatch) => {
+  const res = await fetch(`${API}${id}`, {
     method: 'DELETE',
   });
-  console.log(result);
-  dispatch(removeBook(id));
-};
 
-export { AddABook, GetABook, RemoveABook };
+  dispatch(removeBookAction(id));
+};

@@ -1,7 +1,7 @@
-import { configureStore, applyMiddleware, combineReducers } from '@reduxjs/toolkit';
+import { configureStore, combineReducers, applyMiddleware } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
-
 import thunk from 'redux-thunk';
+
 import booksReducer from './books/books';
 import categoriesReducer from './categories/categories';
 
@@ -11,9 +11,11 @@ const reducer = combineReducers({
   categoriesReducer,
 });
 
+const middlewares = [logger, thunk];
+
 // Create a Redux store holding the state of your app.
 const store = configureStore(
-  { reducer }, applyMiddleware([logger, thunk]),
+  { reducer }, applyMiddleware(...middlewares),
 );
 
 export default store;

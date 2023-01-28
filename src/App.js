@@ -1,16 +1,18 @@
 import { Routes, Route } from 'react-router-dom';
+import Books from './pages/books/Books';
+import Categories from './pages/categories/Categories';
 import Header from './pages/Header';
-import Books from './pages/Books/books';
-import Categories from './pages/categories/categories';
 
-const App = () => (
-  <div className="App">
-    <Header />
-    <Routes>
-      <Route path="/" element={<Books />} />
-      <Route path="/categories" element={<Categories />} />
-    </Routes>
-  </div>
-);
+function App() {
+  return (
+    <div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Books />} />
+        <Route path="categories" element={<Categories />} />
+      </Routes>
+    </div>
+  );
+}
 
 export default App;
