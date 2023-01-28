@@ -1,7 +1,6 @@
-/* eslint-disable missing-file-extension */
 import { Routes, Route } from 'react-router-dom';
-import Books from './pages/books/Books';
-import Categories from './pages/categories/Categories';
+import Books from './pages/books/BooksList';
+import Categories from './pages/categories/CategoriesList';
 import Header from './pages/Header';
 
 function App() {
