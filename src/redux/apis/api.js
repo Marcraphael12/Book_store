@@ -3,7 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 const GET_BOOKS = 'GET_BOOKS';
-const API = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/Nf6SeYddxW75X78pxU1/books';
+const API = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/Nf6SeYddxW75X78pxU1n/books';
 
 const getBooks = createAsyncThunk(
   GET_BOOKS,
