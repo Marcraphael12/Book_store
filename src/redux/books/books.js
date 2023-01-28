@@ -1,31 +1,45 @@
-// action types
-const ADD_BOOK = 'bookStore/books/ADD_BOOK';
-const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+import { v4 as uuid } from 'uuid';
 
-// initial state
-const initialState = [];
+// Define constants
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
+const initialState = [
+  {
+    id: uuid(),
+    title: 'The Catcher in the Rye',
+    author: 'J.D. Salinger',
+  },
+];
 
-// action creators
-export const addBook = (payload) => ({
-  type: ADD_BOOK,
-  payload,
-});
+// Actions for adding and removing books
+const addBook = (book) => (
+  {
+    type: ADD_BOOK,
+    payload: book,
+  }
+);
 
-export const removeBook = (payload) => ({
-  type: REMOVE_BOOK,
-  payload,
-});
+const removeBook = (id) => (
+  {
+    type: REMOVE_BOOK,
+    id,
+  }
+);
 
-// reducer
-const reducer = (state = initialState, action) => {
+// Create reducer
+const BooksReducer = (bookState = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
-      return [...state, action.payload];
+      return [
+        ...bookState,
+        action.payload,
+      ];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.payload);
+      return [...bookState.filter((item) => item.id !== action.id)];
     default:
-      return state;
+      return bookState;
   }
 };
 
-export default reducer;
+export default BooksReducer;
+export { removeBook, addBook };

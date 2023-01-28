@@ -1,16 +1,19 @@
-import { Routes, Route } from 'react-router-dom';
-import Header from './pages/Header';
-import Books from './pages/Books/books';
-import Categories from './pages/categories/categories';
+import {
+  Route, Routes,
+} from 'react-router-dom';
+import BooksPage from './pages/BooksPage';
+import Categories from './pages/Categories';
+import './App.css';
 
-const App = () => (
-  <div className="App">
-    <Header />
-    <Routes>
-      <Route path="/" element={<Books />} />
-      <Route path="/categories" element={<Categories />} />
-    </Routes>
-  </div>
-);
+function App() {
+  return (
+    <main id="storeColor">
+      <Routes>
+        <Route path="/" element={<BooksPage />} />
+        <Route path="/categories" element={<Categories />} />
+      </Routes>
+    </main>
+  );
+}
 
 export default App;
