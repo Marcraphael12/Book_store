@@ -1,17 +1,18 @@
-import { Routes, Route } from 'react-router-dom';
-import Books from './pages/books/BooksList';
-import Categories from './pages/categories/CategoriesList';
-import Header from './pages/Header';
+import {
+  Route, Routes,
+} from 'react-router-dom';
+import BooksPage from './pages/BooksPage';
+import Categories from './pages/Categories';
+import './App.css';
 
 function App() {
   return (
-    <div>
-      <Header />
+    <main id="storeColor">
       <Routes>
-        <Route path="/" element={<Books />} />
-        <Route path="categories" element={<Categories />} />
+        <Route path="/" element={<BooksPage />} />
+        <Route path="/categories" element={<Categories />} />
       </Routes>
-    </div>
+    </main>
   );
 }
 

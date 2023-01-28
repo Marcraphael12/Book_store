@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #777;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

@@ -1,22 +1,24 @@
-// action type
+// Define constants
 const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
+const initialState = '';
 
-// action creator
-export const checkStatus = () => ({
-  type: CHECK_STATUS,
-});
+// Define actions
+const checkStatus = () => (
+  {
+    type: CHECK_STATUS,
+  }
+);
 
-// initial state
-const initialState = [];
-
-// reducer
-const categoriesReducer = (state = initialState, action) => {
+const info = 'Under construction';
+// Define reducer
+const categoryReducer = (state = initialState, action) => {
   switch (action.type) {
     case CHECK_STATUS:
-      return 'Under construction';
+      return info;
     default:
       return state;
   }
 };
 
-export default categoriesReducer;
+export default categoryReducer;
+export { checkStatus };
