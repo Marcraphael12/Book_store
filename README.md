@@ -1,31 +1,11 @@
-<a name="readme-top"></a>
+<div align="center">
+  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
+  <img src="./app_screenshot.png" alt="logo" width="100%"  height="auto" />
+  <br/>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
+  <h3><b>BOOKSTORE APP </b></h3>
 
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
--->
-
-<!-- TABLE OF CONTENTS -->
+</div>
 
 # 📗 Table of Contents
 
@@ -87,7 +67,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [will be available soon](https://yourdeployedapplicationlink.com)
+- [Click here to see live](https://heroic-starburst-6c6dea.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
